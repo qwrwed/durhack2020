@@ -3,8 +3,9 @@
 }
 
 .App-logo {
-  height: 40vmin;
+  height: 7vh;
   pointer-events: none;
+  vertical-align: middle;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -14,13 +15,16 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #ff000046;
+  min-height: 10vh;
+  line-height: 10vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  vertical-align: middle;
+  justify-content: left;
+  font-size: calc(5vh);
   color: white;
 }
 
