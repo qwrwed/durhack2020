@@ -1,5 +1,9 @@
 .App {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600;
 }
 
 .App-logo {
@@ -18,6 +22,7 @@
   background-color: #ff000046;
   min-height: 10vh;
   line-height: 10vh;
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -28,6 +33,9 @@
   color: white;
 }
 
+.App-body {
+  width: 60vw;
+}
 .App-link {
   color: #61dafb;
 }
