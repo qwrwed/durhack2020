@@ -5,11 +5,17 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const cors = require('cors');
 
+const bodyParser = require('body-parser');
+
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const testAPIRouter = require('./routes/testAPI');
+const testpostRouter = require('./routes/testpost');
 
 const app = express();
+
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
 app.use(cors());
 // view engine setup
@@ -25,6 +31,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/testAPI', testAPIRouter);
+app.use('/testpost', testpostRouter);
+
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
   next(createError(404));
